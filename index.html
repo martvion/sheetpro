@@ -366,4 +366,53 @@
                         <div class="w-10 h-10 gradient rounded-xl flex items-center justify-center">
                             <span class="text-white font-bold text-xl">SP</span>
                         </div>
-                        <div 
+                        <div class="text-2xl font-bold">SheetPro</div>
+                    </div>
+                    <p class="text-gray-400">Transforming spreadsheets with the power of AI</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-emerald-400 transition-colors">Features</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-emerald-400 transition-colors">Pricing</a></li>
+                        <li><a href="#demo" class="text-gray-400 hover:text-emerald-400 transition-colors">Demo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#faq" class="text-gray-400 hover:text-emerald-400 transition-colors">FAQ</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-emerald-400 transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">© 2024 SheetPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const answer = faqItem.querySelector('div');
+                const icon = button.querySelector('svg');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
+</body>
+</html>
