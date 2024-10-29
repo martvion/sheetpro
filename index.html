@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SheetPro - Connect ChatGPT to Google Sheets</title>
-    <link rel="icon" href="logo.svg" type="image/x-icon">
+    <link rel="icon" href="logo.ico" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
@@ -289,43 +289,101 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-32 bg-gray-50 hero-pattern">
+    <section id="pricing" class="section py-32 bg-gray-50 hero-pattern">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 gradient-text">Simple and Transparent Pricing</h2>
-            <div class="max-w-md mx-auto glass-effect rounded-3xl shadow-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2">
-                <div class="p-8">
-                    <h3 class="text-2xl font-semibold text-center mb-6">Monthly Subscription</h3>
-                    <div class="text-center mb-8">
-                        <span class="text-6xl font-bold gradient-text">$7.90</span>
-                        <span class="text-gray-600">/month</span>
-                    </div>
-                    <ul class="space-y-6 mb-8">
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 text-emerald-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-lg">Unlimited Access</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 text-emerald-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-lg">Latest Models Included</span>
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-6 h-6 text-emerald-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                            <span class="text-lg">Priority Support</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="block gradient hover:gradient-hover text-white text-center py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
-                        Start now
-                    </a>
+          <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 gradient-text">
+            Simple and Transparent Pricing
+          </h2>
+          
+          <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Free Plan -->
+            <div class="glass-effect rounded-3xl shadow-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2">
+              <div class="p-8">
+                <h3 class="text-2xl font-semibold text-center mb-6">Free Plan</h3>
+                
+                <div class="text-center mb-8">
+                  <span class="text-6xl font-bold gradient-text">0€</span>
+                  <span class="text-gray-600">/month</span>
                 </div>
+      
+                <ul class="space-y-4">
+                  <li class="flex items-center">
+                    <svg class="w-6 h-6 text-emerald-500 mr-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-lg">Limited Access</span>
+                  </li>
+                  <li class="flex items-center text-gray-400">
+                    <svg class="w-6 h-6 mr-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <span class="text-lg">Latest Models</span>
+                  </li>
+                  <li class="flex items-center text-gray-400">
+                    <svg class="w-6 h-6 mr-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    <span class="text-lg">Priority Support</span>
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-6 h-6 text-emerald-500 mr-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    <span class="text-lg">No API needed, no other cost</span>
+                  </li>
+                </ul>
+      
+                <a href="#" class="block bg-gray-100 hover:bg-gray-200 text-gray-800 text-center py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 mt-8">
+                  Start Free
+                </a>
+              </div>
             </div>
+      
+            <!-- Premium Plan -->
+            <div class="glass-effect rounded-3xl shadow-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2">
+              <div class="p-8">
+                <h3 class="text-2xl font-semibold text-center mb-6">Premium Subscription</h3>
+                
+                <div class="text-center mb-8">
+                  <span class="text-6xl font-bold gradient-text">7.90€</span>
+                  <span class="text-gray-600">/month</span>
+                </div>
+      
+                <ul class="space-y-4">
+                  <li class="flex items-center">
+                    <svg class="w-6 h-6 text-emerald-500 mr-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-lg">Unlimited Access</span>
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-6 h-6 text-emerald-500 mr-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-lg">Latest Models Included</span>
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-6 h-6 text-emerald-500 mr-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-lg">Priority Support</span>
+                  </li>
+                  <li class="flex items-center">
+                    <svg class="w-6 h-6 text-emerald-500 mr-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                      </svg>
+                    <span class="text-lg">No API needed, no other cost</span>
+                  </li>
+                </ul>
+      
+                <a href="#" class="block gradient hover:gradient-hover text-white text-center py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 mt-8">
+                  Start now
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
     <!-- FAQ Section -->
     <section class="py-16 bg-white">
