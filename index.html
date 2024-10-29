@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Métadonnées et liens vers les styles -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SheetPro - Connect ChatGPT to Google Sheets</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
+        /* Styles personnalisés */
         .gradient {
             background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
         }
@@ -99,14 +101,43 @@
             width: 100%;
         }
         .screenshot-container {
+            position: relative;
             perspective: 1000px;
         }
         .screenshot-main {
             transform: rotateX(5deg);
             transition: transform 0.3s ease;
+            position: relative;
+            z-index: 3;
         }
         .screenshot-container:hover .screenshot-main {
             transform: rotateX(0deg);
+        }
+        .screenshot-container .screenshot-side {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24rem;
+            opacity: 0.9;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            z-index: 2;
+        }
+        .screenshot-container .screenshot-left {
+            left: 42%;
+            transform: translate(-100%, -50%) rotate(-3deg);
+        }
+        .screenshot-container .screenshot-right {
+            left: 58%;
+            transform: translate(0%, -50%) rotate(3deg);
+        }
+        /* Animation de sortie au survol */
+        .screenshot-container .screenshot-left:hover {
+            transform: translate(-120%, -50%) rotate(0deg);
+            opacity: 1;
+        }
+        .screenshot-container .screenshot-right:hover {
+            transform: translate(20%, -50%) rotate(0deg);
+            opacity: 1;
         }
         .faq-item {
             transition: all 0.3s ease;
@@ -124,6 +155,12 @@
             max-height: 200px;
             opacity: 1;
             padding: 1rem;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
         }
         .contact-button {
             position: relative;
@@ -147,15 +184,6 @@
         }
         .footer-link:hover {
             color: #10B981;
-        }
-        .faq-icon {
-            transition: transform 0.3s ease;
-        }
-        .faq-answer {
-            display: none;
-        }
-        .faq-item.active .faq-answer {
-            display: block;
         }
     </style>
 </head>
@@ -220,12 +248,12 @@
                     <img 
                         src="screen2.png" 
                         alt="Feature Preview 1" 
-                        class="absolute top-1/2 -left-20 transform -translate-y-1/2 -rotate-6 rounded-xl shadow-lg w-72 opacity-75 hover:opacity-100 transition-all duration-300 hover:scale-105"
+                        class="screenshot-side screenshot-left rounded-xl shadow-lg"
                     />
                     <img 
                         src="screen3.png" 
                         alt="Feature Preview 2" 
-                        class="absolute top-1/2 -right-20 transform -translate-y-1/2 rotate-6 rounded-xl shadow-lg w-72 opacity-75 hover:opacity-100 transition-all duration-300 hover:scale-105"
+                        class="screenshot-side screenshot-right rounded-xl shadow-lg"
                     />
                 </div>
             </div>
@@ -406,11 +434,7 @@
         document.querySelectorAll('.faq-item button').forEach(button => {
             button.addEventListener('click', () => {
                 const faqItem = button.parentElement;
-                const answer = faqItem.querySelector('div');
-                const icon = button.querySelector('svg');
-                
-                answer.classList.toggle('hidden');
-                icon.classList.toggle('rotate-180');
+                faqItem.classList.toggle('active');
             });
         });
     </script>
