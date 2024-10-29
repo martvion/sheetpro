@@ -30,17 +30,6 @@
                 radial-gradient(circle at 80% 80%, rgba(5, 150, 105, 0.05) 0%, transparent 50%),
                 radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
         }
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        .animate-float-delayed {
-            animation: float 6s ease-in-out infinite;
-            animation-delay: 2s;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(2deg); }
-        }
         .card-hover {
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -192,12 +181,12 @@
     <header class="fixed w-full z-50 header-blur bg-white/90">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
+                <!-- Logo fixe sans animation -->
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 gradient rounded-xl flex items-center justify-center animate-float">
-                        <span class="text-white font-bold text-xl">SP</span>
-                    </div>
+                    <img src="logo.svg" alt="Logo SheetPro" class="w-10 h-10">
                     <div class="text-2xl font-bold gradient-text">SheetPro</div>
                 </div>
+                <!-- Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#features" class="nav-link text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
                     <a href="#pricing" class="nav-link text-gray-600 hover:text-emerald-600 transition-colors">Pricing</a>
